@@ -1,0 +1,13 @@
+# Arcane Transparent Encryption
+# Arcane Transparent Encryption
+# Auto-committer gitattributes (Managed by Arcane)
+.env filter=git-arcane diff=git-arcane
+.env.* filter=git-arcane diff=git-arcane
+*.lock binary
+*.png binary
+*.jpg binary
+*.mp4 binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary

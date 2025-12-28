@@ -1,0 +1,28 @@
+name: "Arcane Deploy"
+description: "Deploy applications using the Arcane CLI"
+branding:
+    icon: "zap"
+    color: "purple"
+inputs:
+    target:
+        description: "Target server or group name defined in servers.toml"
+        required: true
+    app:
+        description: "Application name (required for --image deployment)"
+        required: false
+    image:
+        description: "Full image URL (e.g. ghcr.io/user/repo:tag). If provided, skips build."
+        required: false
+    env:
+        description: "Environment to load (e.g. production, staging)"
+        required: true
+    machine-key:
+        description: "Arcane Machine Key (AGE-SECRET-KEY-...) for decrypting secrets"
+        required: true
+    working-directory:
+        description: "Working directory containing arcane config"
+        required: false
+        default: "."
+runs:
+    using: "docker"
+    image: "Dockerfile"
