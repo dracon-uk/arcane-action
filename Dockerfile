@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
 
 # Install Arcane from source
 # NOTE: In the future, this should download a pre-compiled binary release to save time.
-RUN cargo install --git https://github.com/dracon-uk/arcane
+RUN cargo install --git https://github.com/DraconDev/arcane
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
